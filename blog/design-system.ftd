@@ -10,35 +10,44 @@ published-on: January 9, 2024
 post-url: /blog/design-system/
 author: $authors.nandini
 
-In this blog, we'll explore the process of creating a web page using fastn's 
-[**`design system package`**](https://github.com/fastn-community/design-system). 
-Whether you're new to fastn or a beginner in web 
-development, this package offers an excellent starting point to build modern 
-websites. 
+Welcome to our tutorial on building websites using the [Design System 
+package](https://design-system.fifthtry.site/). 
 
-It takes care of color schemes, typography, and design elements like section layouts,
-buttons, links, headers, and footers, freeing you from the complexities of individual 
+This package takes care of color schemes, typography, and 
+design elements like section layouts, buttons, links, headers, and 
+and other components, freeing you from the complexities of individual 
 element design. 
 
-You can also customize these design elements to match your brand's identity. 
-
-I recommend starting with the instructional video below to kickstart your journey.
+You can also customize these design elements to match your brand's 
+identity. 
 
 -- ds.blog-page:
 meta: $meta
 
+-- ds.markdown:
+
+In this tutorial, you will learn how to use the design system package
+in the editor of your choice. You will
+You'll learn how to use our pre-built components and typography to build a 
+professional and visually appealing site. 
+
+Let’s dive in and start building your next great website!
+
+-- sidenote.sidenote:
+
+If you’re using the FifthTry Editor, you can skip the `Initial 
+Setup` steps outlined here. Instead, follow the instructions 
+provided on our [Getting Started page](https://fastn-community.github.io/design-system/) 
+to quickly set up your project. You can then return to this tutorial and 
+jump straight to the `Quick Tutorial` section to continue 
+learning how to build your site.
+
+-- ds.markdown:
+
+I recommend starting with the video below to kickstart your journey.
+
 -- ds.youtube:
 v: https://www.youtube.com/embed/qX0K1pWsyuw?si=WgyAJN4P_ZUiFXnY
-
--- ds.h1: Familiarize Yourself with the Design System Package
-
-Begin by thoroughly examining the individual files within the [**design system package**](https://github.com/fastn-community/design-system)
-package. These files consists an array of design elements, including [section 
-layouts](https://github.com/fastn-community/design-system/tree/main/layout), 
-[spacing](https://github.com/fastn-community/design-system/blob/main/spaces.ftd), 
-and [typography](https://github.com/fastn-community/design-system/blob/main/typography.ftd). 
-
-Take your time to explore each file to understand the package's capabilities.
 
 -- ds.h1: Initial Setup
 
@@ -48,7 +57,7 @@ fastn-powered website:
 - [Install fastn](https://fastn.com/install/) on your system.
 - [Install a Text Editor](https://fastn.com/editor/) in your system.
 
--- ds.h1: Setting Up Your Project Folder
+-- ds.h2: Setting Up Your Project Folder
 
 For the purpose of this tutorial, we'll recreate the 
 [talknotes.io](https://talknotes.io/) website. 
@@ -81,22 +90,17 @@ lang: ftd
 
 \-- fastn.dependency: fastn-community.github.io/design-system
 
--- ds.h3: index.ftd
-
-Now, again right click on the folder and click on `New File` and save it as 
-`index.ftd` and add the code below.
-
--- ds.code: index.ftd
-lang: ftd
-
-\-- import: fastn-community.github.io/design-system as ds
+\-- fastn.auto-import: fastn-community.github.io/design-system as ds
 
 -- ds.h3: Designing the Page Structure
 
-Use [`ds.page`](https://github.com/fastn-community/design-system/blob/main/layout/page.ftd) 
-to establish the page's structure in your `index.ftd`. 
+Now let's start with the homepage of your website. In fastn, `index.ftd` file is used as your homepage. 
+In your editor, create a new file and save it as `index.ftd`
 
-Inside this, you can organize all the content intended for the page. Let's 
+Inside your index.ftd, use [`ds.page`](https://github.com/fastn-community/design-system/blob/main/layout/page.ftd) 
+to establish the page's structure. (Always end the `ds.page` with `-- end: ds.page`)
+
+Inside the `ds.page`, you can organize all the content intended for the page. Let's 
 use `ds.heading-hero` to add a heading to this page. Now you can open the 
 terminal and run the command `fastn serve`. 
 
@@ -120,7 +124,14 @@ src: $fastn-assets.files.images.blog.heading-tn.png
 
 -- ds.h1: Quick Tutorial
 
--- ds.h2: Breakdown of key layout structures
+-- ds.h2: Familiarize Yourself with the Design System Components
+
+Begin by thoroughly examining the individual files within the [**design system**](https://fastn-community.github.io/design-system/)
+package. These files consists an array of components, foundational elements, demo sites, and typography. 
+
+Take your time to explore each component to understand the package's capabilities.
+
+-- ds.h2: Breakdown of Foundational Elements
 
 [**`ds.section-row`**](https://github.com/fastn-community/design-system/blob/main/layout/section-row.ftd) 
 is used to structure elements horizontally adjacent to 
